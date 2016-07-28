@@ -12,5 +12,11 @@ works &#9786;. So build at your own risk!
 
 <h4> Last update </h4>
 <p>
-Page was last updated on {{ page.last_modified_at | date: '%d %B %Y' }}.
+Page was last updated on
+{{ site.time | date: '%d %B %Y'}} Revision {{
+site.github.build_revision }}
+</p>
+<p>
+{% last_modified_at | date: '%d %B %Y' %}.
+{% comment %}{{ 'now' | date: '%d %B %Y' }}{% endcomment %}
 </p>
